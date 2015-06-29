@@ -1,35 +1,52 @@
-<!Doctype html>
-<html>
-<head>
-<title>Main Index</title>
-<meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="blog/blog-index.css">
-  <link href='http://fonts.googleapis.com/css?family=Dancing+Script|Amatic+SC' rel='stylesheet' type='text/css'>
-</head>
-<body>
-  <div><img src="imgs/anuja.jpg"/></div>
-  <div id="first"> Welcome to My Webpage! </div>
-<h4> About Me </h4>
-<p> Hi! I am Anuja Verma, I just started my journey with DBC, I know there is so much more out there, to learn, remember, know, discover, love, consume. I had just begun, and I am already having one wonderful trip! </p>
-<p>
+---
+layout: default
+---
 
-This blog is has snippets from my journey at DBC. This is my Portfolio and it has the summary of my learnings. Summary of my prjects. Below are the links which will take you to my weekly blogs, my projects, help you connect with me socially. There is a link below with my contacts. So feel free to email me!! I would love to connect with you and know what you feel about my page.
-</p>
-  <table>
-    <tr>
-      <td><a href="https://twitter.com/anujaverma">Twitter</a></td>
-      <td><a href="https://www.linkedin.com/profile/view?id=24394655">Linkedin</a></td>
-      <td><a href="https://www.facebook.com/anujaverma11">Facebook</a></td>
-      <td><a href="https://www.quora.com/Anuja-Verma-3">Quora</a></td>
-     </tr>
-     <tr>
-      <td><a href="https://github.com/anujaverma11">Github</a></td>
-      <td><a href="Projects/index.html">My Projects</a></td>
-      <td><a href="blog/index.html">My Blog Posts!</a></td>
-      <td><a href="mailto:anuja.verma@gmail.com">Email Me! </a></td>
-    </tr>
-  </table>
+{% for post in paginator.posts %}
+<div class="row-fluid">
+  <div class="span12">
+    <h2>{{ post.title | truncatewords: 10 | capitalize }}</h2>
+    <h4>{{ post.date | date: "%m-%d-%Y" }}</h4>
+    <p>
+      <a href="{{ post.url }}">Read Post</a>
+    </p>
+  </div>
+</div>
 
 
-</body>
-</html>
+{% endfor %}
+
+<div class="row-fluid">
+  <div class="span12">
+    <div class="pagination">
+      <ul>
+        {% if paginator.previous_page %}
+          {% if paginator.previous_page == 1 %}
+          <li><a href="/">Prev</a></li>
+          {% else %}
+          <li><a href="/page{{ paginator.previous_page }}">Prev</a></li>
+          {% endif %}
+        {% else %}
+        <li><span class="disabled">Prev</span></li>
+        {% endif %}
+        {% if paginator.page == 1 %}
+        <li><span class="active">1</span></li>
+        {% else %}
+        <li><a href="/">1</a></li>
+        {% endif %}
+        {% for count in (2..paginator.total_pages) %}
+          {% if count == paginator.page %}
+          <li><span class="active">{{ count }}</span></li>
+          {% else %}
+          <li><a href="/page{{ count }}">{{ count }}</a></li>
+          {% endif %}
+        {% endfor %}
+        {% if paginator.next_page %}
+        <li><a href="/page{{ paginator.next_page }}">Next</a></li>
+        {% else %}
+        <li><span class="disabled">Next</span></li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</div>
