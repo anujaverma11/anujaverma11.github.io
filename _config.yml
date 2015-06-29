@@ -1,8 +1,8 @@
 name: ""
 description: ""
 
-# url: "http://localhost:4000"
-url: "http://www.anujaverma.com"
+url: "http://localhost:4000"
+#url: "anujaverma11.github.io"
 paginate: 10
 
 markdown: rdiscount
