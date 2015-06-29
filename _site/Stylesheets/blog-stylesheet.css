@@ -1,0 +1,36 @@
+
+img{
+height: 200px;
+  width:50%;
+margin-left: 250px;
+margin-bottom: 50px;}
+h1{
+  font-family:cursive;
+  font-size: 50px;
+  color:orange;
+}
+#one{
+    border-style: dotted;
+  }
+  #two{
+    border-style: dashed;
+  }
+  #three{
+    border-style: solid;
+  }
+  #four{
+    border-style: double;
+  }
+  #five{
+    border-style: groove;
+  }
+  #six{
+    border-style: ridge;
+  }
+  #seven{
+    border-style: inset;
+  }
+  #eight{
+    border-style: outset;
+  }
+  div{display:inline-block;}

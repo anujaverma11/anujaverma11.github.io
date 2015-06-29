@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+  <title>Class Methods</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+  <img src="../imgs/blog-head.png"/>
+  <h1>Class Methods</h1>
+  <h2>... with Ruby</h2>
+  <h4>Sunday, June 7 2015</h4>
+
+  <section>
+    <p>
+      To understand class methods lets see what we know about Instance method.<br>
+      <code>
+      class Family<br>
+        def initialize(members)<br>
+          @members = members<br>
+        end<br>
+
+      def family_tree<br>
+        puts "This is my family tree" <br>
+      end
+    </code>
+    </p>
+    <p>
+      In the above code initialize and family_tree are instance methods. Just like instance variables, they work with instances of a Class.
+    </p>
+    <p>
+      Now the class method... <br>
+      You have 2 ways for defining a class method.
+1. By using self variable.
+<code>
+class family
+  def self.family_method
+    puts "Class method show invoked"
+  end
+end
+Item.show
+</code>
+2. By using the name of the class directly.
+<code>
+
+class family
+  def family.family_method
+    puts "Class method show invoked"
+  end
+end
+Item.show
+</code>
+
+    In def self.show, the keyword self denotes that the method show is being defined in the context of the Class itself, not its instances. Any method definition without the self qualifier is by default an instance method.<br>
+    Class methods do not have access to instance methods or instance variables. However instance methods can access both class methods and class variables.<br>
+    Methods defined as class methods only exist in the object that defined them (the class) and nowhere else.
+    </p>
+
+
+  </section>
+</main>

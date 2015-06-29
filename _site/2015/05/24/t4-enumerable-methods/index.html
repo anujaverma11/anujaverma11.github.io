@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <title>Enumerable Method: Group_by</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+  <img src="../imgs/blog-head.png"/>
+  <h1>Ruby Enumerable Method: Group_by</h1>
+
+  <h4>Sunday, May 24 2015</h4>
+
+  <section>
+    <p>
+
+<h4>What is Enumerable method?</h4>
+<p>
+An enumerable method is an object that may be enumerated. "Enumerated" means to count off the members of a set/collection/category one by one (usually in order, usually by name).
+</p>
+<p>
+Enumerable methods can also be used to filter a collection of objects based on one or more selection criteria. One such method is group_by.
+<p>
+group_by groups the collection by result of the block. Returns a hash where the keys are the evaluated result from the block and the values are arrays of elements in the collection that correspond to the key. The syntax: </p>
+<code>
+group_by { |obj| block } → a_hash
+
+<br>
+cats = ["Tiger", "Lion", "Puma", "Leopard", "Jaguar",
+        "Cheetah", "Bobcat"] #1
+<br>
+grouped_by_length = cats.group_by { |cat| cat.length } #2
+<br>
+#{5=>["Tiger"], 4=>["Lion", "Puma"], 7=>["Leopard", "Cheetah"], 6=>["Jaguar", "Bobcat"]} #3
+</code>
+<p>
+<br>To understand the above code:
+<br>#1 This is an array with different kinds of Cats.
+<br>#2 Using Group_by on array cats which willgroup the collection by result based on condition in the block.
+<br>#3 Hash is returned which has length as keys and values as the elements from the array cats.
+</p>
+
+
+
+  </section>
+</main>

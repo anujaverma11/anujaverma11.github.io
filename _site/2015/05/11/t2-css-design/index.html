@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+  <title>Your page title here</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+  <img src="../imgs/blog-head.png"/>
+  <h1>CSS - The difference between Margin, Border, and Padding</h1>
+  <h4>Sunday, May 11 2015</h4>
+
+  <section>
+    <p>
+      CSS Positioning is controlling the position of objects on webpages. This also defines how they look or dont look and also, how they behave with respect to each other. <br>
+
+      CSS Positioning gives the flexibility to manipulate onjects to make the page more user friendly and presentable. <br>
+      <img src="../imgs/csspositioning.png"/>
+    </p>
+    <p>
+      Here in the above Image, we can see a Box model. Each HTML element is like a tiny box which is marked above as Content; this holds the actual element for e.g pictures or text. The main properties which help in positioning are <b>Margin</b>, <b>Border</b>, and <b>Padding</b>
+    </p>
+    <p>
+      The <b>Margin</b> is the space around the element. The larger the size of the margin, the more space it will have with the elements around it.
+      The margin does not have a background and is completely transparent.
+      There are 4 different margins:
+      <ul><b>
+        <li>margin-top</li>
+        <li>margin-bottom</li>
+        <li>margin-right</li>
+        <li>margin-left</li></b>
+      </ul>
+      To use these margins it is required to set them to a value.
+      Hence following are the vlaues, you can set them to either of them:
+      <ul>
+        <li><b>auto</b> - The browser calculates its values</li>
+        <li><b>length</b> - Specifies a margin using some form like px, pt, cm, etc. Default value is 0 px.</li>
+        <li><b>%</b> - Specifies margin in percentage of width of the containing element.</li>
+        <li><b>inherit</b> - Specifies that the margin should be inherited from the parent element</li>
+      </ul><br>
+      You can set the value of the margins directly:<br>
+        p {<br>
+          margin-top: 100px;<br>
+          margin-bottom: 100px;<br>
+          margin-right: 150px;<br>
+          margin-left: 50px;<br>
+          }<br>
+
+          or you can use a shorthand:<br>
+
+          p {<br>
+          margin: 100px 50px 50px 50px;<br>
+            }<br>
+    </p>
+    <p>
+      The <b>Border</b> is the edges of any html element. The border properties allows you to specify the style, size and color of any element. <br>
+      Let's talk about Style. You can use the following syntex:
+      <br>
+      p {<br>
+    border-style: your-style;<br>
+}<br>
+You can replace the 'your-style' in syntax with any of the following:
+
+      <div id="one"> dotted </div>
+      <div id="two"> dashed </div>
+      <div id="three"> solid </div>
+      <div id="four"> double </div>
+      <div id="five"> groove </div>
+      <div id="six"> ridge </div>
+      <div id="seven"> inset </div>
+      <div id="eight"> outset </div> <br>
+
+      <p> The width is set in pixels, or by using one of the three pre-defined values: thin, medium, or thick. For Width you have following syntax:
+        <br>
+      p {<br>
+    border-width: 5px;<br>
+}<br>
+
+  <p>The border-color property is used to set the color of the border. The color can be set by:
+
+name - specify a color name, like "red"
+RGB - specify a RGB value, like "rgb(255,0,0)"
+Hex - specify a hex value, like "#ff0000"
+You can also set the border color to "transparent".
+
+For Width you have following syntax:
+        <br>
+      p {<br>
+    border-color: red;<br>
+}<br>
+</p>
+
+    </p>
+    <p>
+      The <b>Padding</b> is the spacing between the content and the border.
+      There are 4 different paddings:
+      <ul><b>
+        <li>padding-top</li>
+        <li>padding-bottom</li>
+        <li>padding-right</li>
+        <li>padding-left</li></b>
+      </ul>
+      Like margins you can set the value of the padding directly:<br>
+        p {<br>
+          padding-top: 100px;<br>
+          padding-bottom: 100px;<br>
+          padding-right: 150px;<br>
+          padding-left: 50px;<br>
+          }<br>
+
+          or you can use a shorthand:<br>
+
+          p {<br>
+          padding: 100px 50px 50px 50px;<br>
+            }<br>
+
+    </p>
+
+  </section>
+</main>
